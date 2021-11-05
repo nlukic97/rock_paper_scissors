@@ -19,11 +19,7 @@
             scissors:0,
         }
     ]
-    
-    function getTitle(id){
-        // the id is the same as the game title (0. rock, 1. paper, 2. scissors)
-        return ['rock','paper','scissors'][id]
-    }
+
     
     // Check if player 1 has won
     function getPoints(player1, player2){
@@ -48,8 +44,14 @@
         }
     }
     
-    function getRandomInt(){
-        return Math.floor(Math.random() * 3); //0, 1, or 2
+    function computerChoice(){
+        return ['rock','paper','scissors'][Math.floor(Math.random() * 3)]; //gets a random choice - rock, paper or scissors
+    }
+
+    function activate(userChoice){
+        let outcome = getPoints(userChoice,computerChoice())
+        let result = checkResult(outcome)
+        console.log(result);
     }
     
     
@@ -57,25 +59,16 @@
     // Event listeners for user selections
     //paper
     document.querySelector('#paper').addEventListener('click',function(){
-        let computerChoice = getRandomInt()
-        let outcome = getPoints(getTitle(this.getAttribute('data-id')),getTitle(computerChoice))
-        let result = checkResult(outcome)
-        console.log(result);
+        activate(this.getAttribute('data-id'))
     })
     
     //scissors click
     document.querySelector('#scissors').addEventListener('click',function(){
-        let computerChoice = getRandomInt()
-        let outcome = getPoints(getTitle(this.getAttribute('data-id')),getTitle(computerChoice))
-        let result = checkResult(outcome)
-        console.log(result);
+        activate(this.getAttribute('data-id'))
     })
     
     //rock
     document.querySelector('#rock').addEventListener('click',function(){
-        let computerChoice = getRandomInt()
-        let outcome = getPoints(getTitle(this.getAttribute('data-id')),getTitle(computerChoice))
-        let result = checkResult(outcome)
-        console.log(result);
+        activate(this.getAttribute('data-id'))
     })
 })()

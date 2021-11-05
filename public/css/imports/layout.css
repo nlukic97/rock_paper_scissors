@@ -71,6 +71,10 @@ img#logo {
     left: 0;
 }
 
+#paper:hover, #scissors:hover, #rock:hover {
+    cursor: pointer;
+}
+
 #scissors {
     position: absolute;
     top: 0;
