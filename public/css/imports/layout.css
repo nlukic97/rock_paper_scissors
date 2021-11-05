@@ -55,14 +55,31 @@ img#logo {
     width: 100%;
     height: 282px;
     background: url('../../images/bg-triangle.svg') no-repeat center center/contain;
-    background-size: 51%; /* Should re-do this, must change the actual svg looks like*/
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    
+    /* Should re-do this, must change the actual svg looks like */
+    /* background-size: 51%; */
+    background-size: 65%; /* Should re-do this, must change the actual svg looks like*/
+    /* display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; */
+    position: relative;
 }
 
-.game-options .option svg {
-    /* width: 129px; */
-    /* height:129px; */
-    border:1px solid red;
+#paper {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#scissors {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#rock {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
