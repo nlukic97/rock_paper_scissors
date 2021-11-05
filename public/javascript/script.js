@@ -1,4 +1,10 @@
 (function(){
+    let savedScore = localStorage.getItem('saved_score')
+    if(savedScore != null){
+        document.querySelector('.score').innerText = savedScore
+    }
+
+
     let points = [
         {
             title:'rock',
@@ -30,7 +36,7 @@
         }    
     }
     
-    function checkResult(outcome){
+    function getPhrase(outcome){
         switch(outcome){
         case -1:
             return 'You lose';
@@ -43,6 +49,14 @@
             break;
         }
     }
+
+    function updateScore(outcome){
+        let curr = parseInt(document.querySelector('.score').innerText)
+        let result = curr + outcome
+        document.querySelector('.score').innerText = result
+        localStorage.setItem('saved_score',result)
+
+    }
     
     function computerChoice(){
         return ['rock','paper','scissors'][Math.floor(Math.random() * 3)]; //gets a random choice - rock, paper or scissors
@@ -50,7 +64,8 @@
 
     function activate(userChoice){
         let outcome = getPoints(userChoice,computerChoice())
-        let result = checkResult(outcome)
+        updateScore(outcome)
+        let result = getPhrase(outcome)
         console.log(result);
     }
     
