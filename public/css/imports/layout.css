@@ -118,9 +118,9 @@ button.btn.rules:hover {
 }
 
 /* How to style the focused state of the button element for accessibility without having a blue outline when clicking on the button? */
-button.btn:focus {
-    /* outline: 3px solid #1869A8; */
-}
+/* button.btn:focus {
+    outline: 3px solid #1869A8;
+} */
 
 
 .game-outcome {
