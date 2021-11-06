@@ -96,10 +96,6 @@ button.btn {
     outline: none;
 }
 
-a:-webkit-any-link {
-    /* outline: none; */
-}
-
 button.btn:hover {
     cursor: pointer;
 }
@@ -123,5 +119,43 @@ button.btn.rules:hover {
 
 /* How to style the focused state of the button element for accessibility without having a blue outline when clicking on the button? */
 button.btn:focus {
-    outline: 3px solid #1869A8;
+    /* outline: 3px solid #1869A8; */
+}
+
+
+.game-outcome {
+    display: none;
+}
+
+body.choice-made .game-outcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+body.choice-made .game-options {
+    display: none;
+}
+
+.user-choice, .computer-choice {
+    text-align: center;
+}
+
+.computer-choice img {
+    display: none;
+}
+
+.blank-circle {
+    border-radius: 50%;
+    height: 110px;
+    width: 110px;
+    background-color: rgba(0,0,0,.1);
+    margin: 0 auto 10px;
+}
+
+.computer-choice.choice-made img {
+    display: inline;
+}
+.computer-choice.choice-made .blank-circle {
+    display: none;
 }
