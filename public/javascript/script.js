@@ -50,6 +50,23 @@
 
 
 
+    // button to display the rules
+    document.querySelector('.btn.rules').addEventListener('click',function(){
+        document.body.classList.add('show-rules')
+    })
+
+    // button to close the rules
+    document.querySelector('.close-btn').addEventListener('click',function(){
+        document.body.classList.remove('show-rules')
+    })
+
+    // button to restart the game
+    document.querySelector('.btn.play-again').addEventListener('click',function(){
+        resetGame()
+    })
+
+
+
 
     /** --------------- Methods --------------- */
 
@@ -66,6 +83,9 @@
 
             let result = getResult(choice, computer)
             console.log(result);
+            document.querySelector('#result-display #outcome').innerText = result
+
+            document.body.classList.add('game-finished')
         },400)
     }
 
@@ -120,6 +140,7 @@
         document.body.classList.remove('choice-made')
         document.querySelector('.computer-choice img').src = ''
         document.querySelector('.computer-choice').classList.remove('choice-made')
+        document.body.classList.remove('game-finished')
     }
 
     
