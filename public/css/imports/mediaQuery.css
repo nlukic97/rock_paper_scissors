@@ -24,3 +24,31 @@
         margin: 0 auto 40px;
     }
 }
+
+
+@media screen and (min-width:600px) {
+    .modal-container .inner-modal {
+        width: 400px;
+        height: 415px;
+        margin: 60px auto 120px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-radius: 8px;
+    }
+
+    .modal-container .inner-modal h2 {
+        order: 1;
+        flex-basis: 115px;
+        text-align: left;
+    }
+
+    .modal-container .inner-modal .close-btn-container {
+        order: 2;
+        flex-basis: 90px;
+        text-align: right;
+    }
+
+    .modal-container .inner-modal .rules-svg {
+        order: 3;
+    }
+}
