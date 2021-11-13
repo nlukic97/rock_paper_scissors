@@ -1,0 +1,26 @@
+@media screen and (min-width:800px) {
+    .container {
+        width: 700px;
+    }
+
+    .game-options {
+        width: 476px;
+        height: 430px;
+        margin: 0 auto;
+    }
+
+    #paper, #scissors, #rock {
+        width: 198px;
+        height: 194px;
+    }
+
+    .user-choice img, .computer-choice img {
+        width: 292px;
+    }
+
+    .blank-circle {
+        height: 224px;
+        width: 224px;
+        margin: 0 auto 40px;
+    }
+}
